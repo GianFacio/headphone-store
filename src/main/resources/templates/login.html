@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="ISO-8859-1" />
+    <title>Headphone Store</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-info navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">Headphone Store</a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/headphonestore}">Costumer Store</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Product Container -->
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem">
+            <div class="card-body p-5 text-center">
+              <h3 class="mb-5">Admin Log In</h3>
+
+              <div class="form-outline mb-4">
+                <input
+                  type="email"
+                  id="typeEmailX-2"
+                  class="form-control form-control-lg"
+                />
+                <label class="form-label" for="typeEmailX-2">Username</label>
+              </div>
+
+              <div class="form-outline mb-4">
+                <input
+                  type="password"
+                  id="typePasswordX-2"
+                  class="form-control form-control-lg"
+                />
+                <label class="form-label" for="typePasswordX-2">Password</label>
+              </div>
+
+              <!-- Button to log into the Admine store -->
+              <a th:href="@{/headphones}" class="btn btn-info btn-lg btn-block">
+                Login</a>
+
+              <hr class="my-4" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

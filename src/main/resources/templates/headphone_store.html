@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="ISO-8859-1" />
+    <title>Headphone Store</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"/>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-info navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">Headphone Store</a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/login}">Admin Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <h1>Headphones</h1>
+      </div>
+
+      <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th>Headphone Brand</th>
+            <th>Headphone Model</th>
+            <th>Headphone Color</th>
+            <th>Headphone Year</th>
+            <th>Headphone Price</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr th:each="headphone: ${headphones}">
+            <td th:text="${headphone.brand}"></td>
+            <td th:text="${headphone.model}"></td>
+            <td th:text="${headphone.color}"></td>
+            <td th:text="${headphone.year}"></td>
+            <td th:text="${headphone.price}"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
